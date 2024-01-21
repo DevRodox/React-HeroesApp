@@ -5,10 +5,10 @@ import { HeroesMain, childHeroesRouter } from '../heroes'
 
 const router = createBrowserRouter ([
     {
-        path: "/",
+        path: "/*",
         element: <HeroesMain />,
         errorElement: <Navigate to="/"/>,
-        children: childHeroesRouter
+        children: childHeroesRouter 
     }, 
     {
         path: "/login",

@@ -1,4 +1,4 @@
-import { DcPage, MarvelPage } from "../pages";
+import { DcPage, MarvelPage } from "../";
 
 export const childHeroesRouter = [
     {
