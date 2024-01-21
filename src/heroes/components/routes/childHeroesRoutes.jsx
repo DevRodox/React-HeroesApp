@@ -1,4 +1,4 @@
-import { DcPage, MarvelPage } from "../";
+import { DcPage, MarvelPage, HeroPage, SearchPage } from "../";
 
 export const childHeroesRouter = [
     {
@@ -9,4 +9,12 @@ export const childHeroesRouter = [
         path: "dc",
         element: <DcPage />
     }, 
+    {
+        path: "search",
+        element: <SearchPage />
+    },
+    {
+        path: "hero",
+        element: <HeroPage />
+    }
 ];
