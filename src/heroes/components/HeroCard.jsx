@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-const charactersByHero = (alter_ego, characters) => {
-    if( alter_ego === characters ) return (<></>);
+const CharactersByHero = ({ alter_ego, characters }) => {
+    if( alter_ego === characters ) return null;
     return <p>{ characters }</p>;
 };
 
@@ -30,7 +30,7 @@ export const HeroCard = ({
                             <h5 className="card-title">{ superhero }</h5>
                             <p className="card-text">{ alter_ego }</p>
                             
-                            <charactersByHero 
+                            <CharactersByHero 
                                 characters = { characters }
                                 alter_ego = { alter_ego }
                             />
