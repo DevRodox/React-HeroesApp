@@ -11,7 +11,7 @@ export const LoginPage = () => {
 
     login('rodox');
 
-    navigate('/',{
+    navigate('/marvel',{
       replace: true
     });
   };
