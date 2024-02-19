@@ -2,8 +2,8 @@ import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom"
 
 import { LoginPage } from '../auth';
 import { HeroesMain, childHeroesRouter } from '../heroes'
-import { PrivateRoute } from "../heroes/components/routes/PrivateRoute";
-import { PublicRoute } from "../heroes/components/routes/PublicRoute";
+import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
 
 const router = createBrowserRouter ([
     {
