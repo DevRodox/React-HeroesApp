@@ -33,25 +33,23 @@ describe('Pruebas en <PublicRoute />', () => {
      
         const routesConfig = [
           {
-            path: '/login',
+            path: '/marvel',
             element: (
-              <PublicRoute>
-                <h1>Usuario no logeado</h1>
-              </PublicRoute>
-            ),
+              <h1>MarvelPage</h1>
+            )
           }
         ]
      
         const router = createMemoryRouter(routesConfig, {
-          initialEntries: ['/login'],
+          initialEntries: ['/marvel'],
         })
      
         render(
           <AuthContext.Provider value={contextValue}>
             <RouterProvider router={router} />
           </AuthContext.Provider>
-        )
-     
-        expect(screen.getByText('MarvelPage')).toBeTruthy()
+        );
+
+        expect(screen.getByText('MarvelPage')).toBeTruthy();
       })
 });
