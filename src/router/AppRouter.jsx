@@ -1,16 +1,15 @@
-import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
-
+import { Navigate} from "react-router-dom";
 import { LoginPage } from '../auth';
 import { HeroesMain, childHeroesRouter } from '../heroes'
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
-const router = createBrowserRouter ([
+export const AppRouter = [
     {
         path: "/*",
         element: <PrivateRoute>
                     <HeroesMain />
-                 </PrivateRoute> ,
+                 </PrivateRoute>,
         errorElement: <Navigate to="/"/>,
         children: childHeroesRouter 
     }, 
@@ -20,13 +19,6 @@ const router = createBrowserRouter ([
                     <LoginPage />
                  </PublicRoute>
     }
-]); 
+];
 
-export const AppRouter = () => {
-    return(
-        <>
-            <RouterProvider router={ router } /> 
-        </>
-    );
-};
 
